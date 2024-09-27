@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- DOM -->
+    <div id="root">
+      <!-- Initial content of the root div -->
+    </div>
+
+    <!-- Including the React library -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+
+    <!-- Including the ReactDOM library -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      // Creating a React element (h1) with the text "FIRST REACT CODE"
+      //React.createElement method, which you use to define the UI should look like
+      const message = React.createElement("h1", {}, "FIRST REACT CODE");
+
+      // Getting the root element from the DOM where the React app will be rendered
+      //ReactDOM.createRoot is used to create a root for your React application and to render the created React element into the specified DOM element (the div with id="root").
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      // Rendering the React element (message) inside the root div
+      root.render(message);
+    </script>
+  </body>
+</html>
